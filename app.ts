@@ -9,7 +9,7 @@ const person: {
   hobbies: ["Sports", "Cooking"],
   role: [2, "author"],
 };
-
+//efme
 person.role.push("admin");
 person.role[0] = 10;
 let favActivities: (number | string)[];
