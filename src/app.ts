@@ -1,9 +1,30 @@
-function addno(n1: number, n2: number) {
-  return n1 + n2;
+class Department {
+  name: string;
+  private employees: string[] = [];
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  describe(this: Department) {
+    console.log("Departmnent: " + this.name);
+  }
+
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+
+  printEmployeeInfo() {
+    console.log(this.employees);
+  }
 }
 
-function printResults(num: number) {
-  console.log("Result: " + num);
-}
+const accounting = new Department("Accounting");
+console.log(accounting);
 
-printResults(addno(5, 7));
+accounting.describe();
+
+accounting.addEmployee("Gabriel");
+accounting.addEmployee("Emmanuel");
+
+accounting.printEmployeeInfo;

@@ -1,9 +1,22 @@
 "use strict";
-function addno(n1, n2) {
-    return n1 + n2;
+class Department {
+    constructor(n) {
+        this.employees = [];
+        this.name = n;
+    }
+    describe() {
+        console.log("Departmnent: " + this.name);
+    }
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+    printEmployeeInfo() {
+        console.log(this.employees);
+    }
 }
-function printResults(num) {
-    console.log("Result: " + num);
-}
-printResults(addno(5, 7));
-//# sourceMappingURL=app.js.map
+const accounting = new Department("Accounting");
+console.log(accounting);
+accounting.describe();
+accounting.addEmployee("Gabriel");
+accounting.addEmployee("Emmanuel");
+accounting.printEmployeeInfo;
